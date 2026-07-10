@@ -4,7 +4,8 @@
 # Maven build output
 target/
 
-# IntelliJ IDEA
+# Ignore target folders in the root and all sub-modules
+**/target/
 .idea/
 *.iml
 
