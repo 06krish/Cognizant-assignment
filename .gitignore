@@ -1,1 +1,13 @@
+# Compiled Java classes
 *.class
+
+# Maven build output
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
