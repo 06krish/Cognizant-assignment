@@ -1,0 +1,50 @@
+REST Controller - CRUD APIs
+
+Current Architecture:
+
+Browser / Postman
+        │
+        ▼
+EmployeeController
+        │
+        ▼
+EmployeeService
+        │
+        ▼
+EmployeeRepository
+        │
+        ▼
+H2 Database
+
+REST api is api that communicate using http
+http is language that is used to communicate over web
+
+
+*********************************
+
+HTTP Status Codes
+Every response includes a status code.
+200 OK
+Everything worked.
+
+201 Created
+A new resource was successfully created.
+Usually returned after POST.
+
+400 Bad Request
+Client sent invalid data.
+Example
+Age = "abc"
+
+404 Not Found
+Resource doesn't exist.
+Example
+GET /employees/999
+when employee 999 isn't in the database.
+
+500 Internal Server Error
+Something went wrong inside the server.
+Usually a bug in the application.
+
+@PathVariable → Reads data from the URL.
+@RequestBody → Reads data from the HTTP Body.

@@ -1,0 +1,56 @@
+What is a Repository?
+
+Think of it as a bridge between your Java application and the database.
+
+Application
+      │
+      ▼
+EmployeeRepository
+      │
+      ▼
+Hibernate
+      │
+      ▼
+Database
+
+Instead of writing SQL yourself, you simply call methods on the repository.
+
+
+
+####  The Magic of Spring Data JPA
+
+When Spring Boot starts, it sees:
+
+extends JpaRepository
+
+Spring says:
+
+"I'll generate the implementation automatically."
+
+Internally, something like this happens:
+
+You Write
+
+EmployeeRepository
+
+↓
+
+Spring Boot Generates
+
+EmployeeRepositoryImpl
+
+↓
+
+Contains save()
+
+Contains delete()
+
+Contains findAll()
+
+Contains findById()
+
+Contains count()
+
+Contains existsById()
+
+You never see this generated class, but Spring creates it at runtime.
