@@ -1,0 +1,19 @@
+Application Starts
+        │
+        ▼
+Reads application.properties
+        │
+        ▼
+Creates H2 Database
+        │
+        ▼
+Configures Hibernate
+        │
+        ▼
+Looks for @Entity classes
+        │
+        ▼
+Creates Tables Automatically
+        │
+        ▼
+Starts Embedded Tomcat Server
