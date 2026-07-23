@@ -26,9 +26,11 @@ public class CountryController {
     }
 
     @GetMapping("/{code}")
+    @SuppressWarnings("unchecked")
     public Country getCountryByCode(@org.springframework.web.bind.annotation.PathVariable String code) {
         LOGGER.info("START");
-        java.util.List<Country> countries = context.getBean("countryList", java.util.List.class);
+        java.util.List<Country> countries = (java.util.List<Country>) context.getBean("countryList",
+                java.util.List.class);
         Country foundCountry = countries.stream()
                 .filter(c -> c.getCode().equalsIgnoreCase(code))
                 .findFirst()
